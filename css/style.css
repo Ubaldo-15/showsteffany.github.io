@@ -1,12 +1,13 @@
 :root {
-    --primary: #9854c2;
-    --primary1: #c183e7;
-    --secondary: #FB9F38;
+    --primary: #643085;
+    --primary1: #c4a8e8;
+    --secondary: #c4a8e8;
     --light: #F5F8F2;
     --dark: #252C30;
 }
 body{
-    background: #b38dcb;
+    background: #c4a8e8;
+    background: url(../img/bg-stars.png) center center ;
 }
 h1,
 h2,
@@ -45,6 +46,35 @@ h5{
   filter: blur(8px);
   animation: glowing 20s linear infinite;
 }
+.btn-about{
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  width: 150px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px 10px 36px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  color: var(--light);
+  background: var(--primary1);
+  margin-top: 10px;
+}
+.btn-about:hover{
+  color: #fff;
+  background: var(--primary);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3)
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.img-fluid-15{
+  max-width: 125%;
+  height: auto;
+}
 
 @keyframes glowing{
   0%{
@@ -61,7 +91,7 @@ h5{
 }
 .btn-15{
   font-family: "Lato", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   width: 150px;
   letter-spacing: 1px;
@@ -69,15 +99,14 @@ h5{
   padding: 8px 28px 10px 28px;
   border-radius: 5px;
   transition: ease-out .5s;
-  box-shadow: inset 0 0 0 0 var(--primary);
-  color: var(--blue);
-  background: white;
+  box-shadow: inset 0 0 0 0 var(--primary1);
+  color: var(--dark);
+  background: var(--light);
   margin-top: 10px;
 }
 .btn-15:hover{
-  box-shadow: inset 150px 0 0 0 var(--primary1);
+  box-shadow: inset 150px 0 0 0 var(--primary);
   color: white;
-
 }
 
 /*** Navbar ***/
@@ -90,7 +119,7 @@ h5{
 .navbar .navbar-brand {
     position: absolute;
     padding: 0;
-    width: 162px;
+    width: 165px;
     height: 135px;
     top: 0;
     left: 100px;
@@ -98,10 +127,10 @@ h5{
 }
 
 .navbar .navbar-nav .nav-link {
-    margin-right: 45px;
+    margin-right: 50px;
     padding: 40px 0;
     color: var(--dark);
-    font-weight: 600;
+    font-weight: 700;
     text-transform: none;
     outline: none;
 }
@@ -188,7 +217,7 @@ CAROUSEL
   background-color: #1d2cb8;
 }
 .page-header {
-  background: linear-gradient(rgba(116, 103, 194, 0.7), rgba(153, 131, 202, 0.7)), url(../img/banner.jpg) center center no-repeat;
+  background: linear-gradient(var(--primary1), var(--primary1)), url(../img/banner.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -200,6 +229,7 @@ CAROUSEL
 .page-header .breadcrumb-item a {
   font-size: 18px;
   color: var(--light);
+  font-weight: 600;
 }
 /*SECTION GENERAL*/
 section{
@@ -245,6 +275,8 @@ section{
 /* ABOUT */
 .about{
     padding: 50px 0;
+    background: var(--primary1) url(../img/bg-stars.png) center center repeat ;
+ 
 }
 .about h1{
   font-family: "Handlee",cursive;
@@ -275,36 +307,33 @@ section{
     margin-bottom: 0;
 }
 
-.about .content .read-more{
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 25px 10px 20px;
-    border-radius: 5px;
-    transition: 0.5s;
-    color: #fff;
-    background: linear-gradient(45deg, var(--primary)0%, var(--primary1) 100%);
-    position: relative;
-}
-
-.about .content .read-more:hover{
-    background: linear-gradient(180deg, var(--primary)0%, var(--primary1) 100%);
-}
-
 .about .content .read-more i{
     font-size: 22px;
     position: absolute;
     right: 20px;
     top:12px;
 }
+.about .p-4{
+  padding: 0.5rem !important  ;
+}
+.about .tab-class{
+  background-color: var(--primary1);
+}
+
+/*** About Start ***/
+.about .tab-class .nav .nav-item a.active,
+.about .tab-class .nav .nav-item a.active span {
+    background: var(--primary) !important;
+    color: white !important;
+    
+
+}
 /*--------------------------------------------------------------
 # Our Projects Section
 --------------------------------------------------------------*/
 .galeria{
-    background: #a6c3d3;
     padding: 50px 0;
+    background: var(--primary1);
 }
 .galeria h2{
   font-family: "Handlee",cursive;
@@ -330,7 +359,7 @@ section{
   
   .galeria .portfolio-flters li:hover,
   .galeria .portfolio-flters li.filter-active {
-    color: var(--primary);
+    color: var(--light);
   }
   
   .galeria .portfolio-flters li:first-child {
@@ -370,12 +399,11 @@ section{
   .galeria .portfolio-content .portfolio-info h4 {
     font-size: 14px;
     padding: 5px 10px;
-    font-weight: 400;
+    font-weight: 600;
     color: #fff;
     display: inline-block;
     background-color: var(--primary);
   }
-  
   .galeria .portfolio-content .portfolio-info p {
     position: absolute;
     bottom: 10px;
@@ -509,7 +537,7 @@ section{
   }
 }
 .testimonios{
-  background: #d5e2e4;
+  background: url(../img/bg-stars.png) center center ;
   padding: 50px 0;
 }
 .testimonios .fas{
@@ -569,22 +597,23 @@ section{
   bottom: 45px;
   z-index: 99;
   color: #000;
-  background-color: #9581dd;
-  border-color: #6426d8;
+  background-color: var(--primary1);
+  border-color: var(--primary);
 }
 
 .back-to-top:hover{
-  background-color: #6426d8;
-  border-color: #9581dd;
+  background-color: var(--primary);
+  border-color: var(--primary1);
+  color: white;
 }
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
   font-size: 14px;
-  background-color: #1f1f24;
+  background-color: var(--primary1);
   padding: 50px 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(8, 8, 8);
 }
 
 .footer .icon {
@@ -639,9 +668,9 @@ section{
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  border: 2px solid rgba(177, 102, 174, 0.2);
+  border: 2px solid rgb(0, 0, 0);
   font-size: 22px;
-  color: rgba(202, 157, 206, 0.7);
+  color: var(--dark);
   margin-right: 15px;
   transition: 0.3s;
 }
@@ -654,7 +683,7 @@ section{
 .footer .copyright {
   text-align: center;
   padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0);
 }
 
 .footer .credits {
