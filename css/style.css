@@ -1,7 +1,7 @@
 :root {
     --primary: #643085;
     --primary1: #c4a8e8;
-    --secondary: #c4a8e8;
+    --secondary: #dcd0ec;
     --light: #F5F8F2;
     --dark: #252C30;
 }
@@ -233,7 +233,7 @@ CAROUSEL
 }
 /*SECTION GENERAL*/
 section{
-    padding: 100px 0;
+    padding: 50px 0;
     overflow: hidden;
 }
 
@@ -605,6 +605,131 @@ section{
   background-color: var(--primary);
   border-color: var(--primary1);
   color: white;
+}
+/*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+.features .nav-tabs {
+  border: 0;
+}
+
+.features .nav-link {
+  background-color: var(--primary1);
+  color: var(--heading-color);
+  border: 1px solid color-mix(in srgb, var(--primary), transparent 85%);
+  padding: 15px 20px;
+  transition: 0.3s;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 100%;
+}
+
+.features .nav-link i {
+  padding-right: 15px;
+  font-size: 48px;
+}
+
+.features .nav-link h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.features .nav-link:hover {
+  color: var(--primary);
+  border-color: var(--accent-color);
+}
+
+.features .nav-link.active {
+  background: var(--secondary);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
+
+.features .nav-link.active h4 {
+  color: var(--contrast-color);
+}
+
+@media (max-width: 768px) {
+  .features .nav-link {
+    padding: 12px 15px; /* Reduce el padding para pantallas más pequeñas */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+  }
+
+  .features .nav-link i {
+    font-size: 36px; /* Ajusta el tamaño del icono */
+    padding-right: 10px; /* Ajusta el espacio entre el icono y el texto */
+  }
+
+  .features .nav-link h4 {
+    font-size: 16px; /* Ajusta el tamaño del texto */
+  }
+  .features .features-title{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features .nav-link {
+    padding: 10px 12px; /* Ajusta el padding para pantallas muy pequeñas */
+    font-size: 18px; /* Reduce aún más el tamaño de la fuente */
+    flex-direction: column; /* Cambia la dirección de flex para apilar el icono y el texto */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: flex-start; /* Alinea el contenido hacia arriba */
+  }
+
+  .features .nav-link i {
+    font-size: 16px; /* Ajusta el tamaño del icono */
+    padding-left: 5px; /* Ajusta el espacio entre el icono y el texto */
+  }
+
+  .features .nav-link h4 {
+    font-size: 10px; /* Ajusta el tamaño del texto */
+  }
+
+  .features .features-title{
+    font-size: 25px;
+  }
+}
+
+.features .tab-content {
+  margin-top: 30px;
+}
+
+.features .tab-pane h3 {
+  color: var(--heading-color);
+  font-weight: 700;
+  font-size: 29px;
+}
+
+.features .tab-pane ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features .tab-pane ul li {
+  padding-bottom: 10px;
+}
+
+.features .tab-pane ul i {
+  font-size: 15px;
+  padding-right: 4px;
+  color: var(--primary1);
+}
+
+.features p{
+  font-weight: 700;
+  font-size: 20px;
+}
+.features-title {
+  font-size: 32px; /* Tamaño de fuente más grande para el título */
+  font-weight: 700; /* Negrita */
+  color: var(--dark); /* Usando la variable de color para el título */
+  margin-bottom: 50px; /* Espacio debajo del título */
+  text-align: center; /* Centra el título */
 }
 /*--------------------------------------------------------------
 # Footer
