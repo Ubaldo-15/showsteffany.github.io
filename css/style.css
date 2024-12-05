@@ -615,97 +615,66 @@ section{
 }
 
 .features .nav-link {
-  background-color: var(--primary1);
-  color: var(--dark);
-  border: 1px solid color-mix(in srgb, var(--primary), transparent 85%);
-  padding: 15px 20px;
-  transition: 0.3s;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: 0;
+  padding: 25px 20px;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
   border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  transition: 0s;
   cursor: pointer;
   height: 100%;
 }
 
 .features .nav-link i {
-  padding-right: 15px;
-  font-size: 48px;
+  font-size: 32px;
+  line-height: 0;
 }
 
 .features .nav-link h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  margin: 0;
+  margin: 10px 0 0 0;
 }
 
 .features .nav-link:hover {
-  color: var(--primary);
-  border-color: var(--secondary);
- 
+  color: var(--primary1);
 }
 
+.features .nav-link:hover,
 .features .nav-link.active {
-  background: var(--secondary);
-  color: var(--contrast-color);
+  transition: 0.3s;
+  background: var(--primary1);
+  color: var(--dark) !important;
   border-color: var(--primary1);
   box-shadow: 0px 1px 6px 0px rgba(187, 120, 193, 0.908);
 }
 
+.features .nav-link:hover h4,
 .features .nav-link.active h4 {
   color: var(--contrast-color);
 }
 
-@media (max-width: 768px) {
-  .features .nav-link {
-    padding: 12px 15px; /* Reduce el padding para pantallas más pequeñas */
-    font-size: 14px; /* Ajusta el tamaño de la fuente */
-  }
-
-  .features .nav-link i {
-    font-size: 36px; /* Ajusta el tamaño del icono */
-    padding-right: 10px; /* Ajusta el espacio entre el icono y el texto */
-  }
-
-  .features .nav-link h4 {
-    font-size: 16px; /* Ajusta el tamaño del texto */
-  }
-  .features .features-title{
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .features .nav-link {
-    padding: 10px 12px; /* Ajusta el padding para pantallas muy pequeñas */
-    font-size: 18px; /* Reduce aún más el tamaño de la fuente */
-    flex-direction: column; /* Cambia la dirección de flex para apilar el icono y el texto */
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
-    justify-content: flex-start; /* Alinea el contenido hacia arriba */
-  }
-
-  .features .nav-link i {
-    font-size: 16px; /* Ajusta el tamaño del icono */
-    padding-left: 5px; /* Ajusta el espacio entre el icono y el texto */
-  }
-
-  .features .nav-link h4 {
-    font-size: 10px; /* Ajusta el tamaño del texto */
-  }
-
-  .features .features-title{
-    font-size: 25px;
-  }
+.features .nav-link:hover i,
+.features .nav-link.active i {
+  color: var(--contrast-color) !important;
 }
 
 .features .tab-content {
   margin-top: 30px;
 }
 
+.features .tab-pane.active {
+  animation: fadeIn 0.5s ease-out;
+}
+
 .features .tab-pane h3 {
-  color: var(--heading-color);
-  font-weight: 700;
-  font-size: 29px;
+  font-weight: 600;
+  font-size: 28px;
 }
 
 .features .tab-pane ul {
@@ -718,21 +687,41 @@ section{
 }
 
 .features .tab-pane ul i {
-  font-size: 15px;
-  padding-right: 4px;
+  font-size: 20px;
+  margin-right: 4px;
   color: var(--primary1);
 }
 
+.features .tab-pane p:last-child {
+  margin-bottom: 0;
+}
+.features-title {
+  font-size: 32px; /* Tamaño de fuente más grande para el título */
+  font-weight: 800; /* Negrita */
+  color: var(--dark); /* Usando la variable de color para el título */
+  margin-bottom: 50px; /* Espacio debajo del título */
+  text-align: center; /* Centra el título */
+}
 .features p{
   font-weight: 700;
   font-size: 20px;
 }
-.features-title {
-  font-size: 32px; /* Tamaño de fuente más grande para el título */
-  font-weight: 700; /* Negrita */
-  color: var(--dark); /* Usando la variable de color para el título */
-  margin-bottom: 50px; /* Espacio debajo del título */
-  text-align: center; /* Centra el título */
+
+.features .cta-btn {
+  color: var(--light);
+  font-weight: 600;
+  font-size: 17px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin-top: 10px;
+  background: var(--primary1);
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 20%)
+}
+
+.features .cta-btn:hover {
+  background: color-mix(in srgb, var(--primary) 90%, black 15%);
 }
 /*--------------------------------------------------------------
 # Footer
