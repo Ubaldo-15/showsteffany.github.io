@@ -72,6 +72,10 @@ h5{
   height: auto;
   border-radius: 5%;
 }
+.img-fluid-slider {
+  max-width: 100%;
+  height: auto;
+}
 .img-fluid-15{
   max-width: 135%;
   height: auto;
@@ -620,7 +624,7 @@ section{
   border: 0;
   padding: 25px 20px;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 0;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -723,6 +727,37 @@ section{
 .features .cta-btn:hover {
   background: color-mix(in srgb, var(--primary) 90%, black 15%);
 }
+
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+  background: linear-gradient(90deg, rgba(88, 70, 249, 0.5) 0%, rgba(123, 39, 216, 0.5) 100%);
+  padding: 80px 0 60px 0;
+}
+
+.counts h1{
+  color: white;
+  font-weight: 700;
+}
+.counts a{
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+.counts a:hover{
+  color: green;
+}
+.counts .btn-read-more i {
+    margin-left: 5px;
+    font-size: 22px;
+    transition: 0.3s;
+  }
+  
+.counts .btn-read-more:hover i {
+    transform: translateX(5px);
+    color: green;
+  }
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
