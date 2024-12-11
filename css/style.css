@@ -687,12 +687,15 @@ section{
 }
 
 .features .tab-pane ul li {
-  padding-bottom: 10px;
+  padding: 0 0 8px 26px;
+  position: relative;
 }
 
 .features .tab-pane ul i {
-  font-size: 20px;
-  margin-right: 4px;
+  position: absolute;
+  font-size: 18px;
+  left: 0;
+  top: -1px;
   color: var(--primary1);
 }
 
